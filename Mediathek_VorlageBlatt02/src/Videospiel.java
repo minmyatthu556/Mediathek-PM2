@@ -56,12 +56,6 @@ class Videospiel extends AbstractMedium
         return _system;
     }
 
-    public void setSystem(String system)
-    {
-        assert system != null : "Vorbedingung verletzt: system != null";
-        _system = system;
-    }
-
     public String getFormatiertenString()
     {
         String str = super.getFormatiertenString();
