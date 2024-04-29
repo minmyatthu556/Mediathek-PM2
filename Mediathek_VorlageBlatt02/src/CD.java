@@ -109,7 +109,7 @@ class CD extends AbstractMedium
         _spiellaenge = spiellaenge;
     }
 
-
+    @Override
     public String getFormatiertenString()
     {
         String str = super.getFormatiertenString();

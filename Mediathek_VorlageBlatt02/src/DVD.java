@@ -112,6 +112,7 @@ class DVD extends AbstractMedium
         _regisseur = regisseur;
     }
 
+    @Override
     public String getFormatiertenString()
     {
         String str = super.getFormatiertenString();
