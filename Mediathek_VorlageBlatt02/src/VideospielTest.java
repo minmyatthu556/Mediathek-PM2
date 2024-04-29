@@ -53,4 +53,13 @@ public class VideospielTest
         assertEquals(medium.getTitel(), "Titel2");
     }
 
+    @Test
+    public void testBerechneMietgebuehr()
+    {
+        int euro = _videoSpiel.berechneMietgebuehr(4).getEuroAnteil();
+        int cent = _videoSpiel.berechneMietgebuehr(4).getCentAnteil();
+        assertEquals("Falscher EuroAnteil",8, euro);
+        assertEquals("Falscher CentAnteil",0, cent);
+    }
+
 }

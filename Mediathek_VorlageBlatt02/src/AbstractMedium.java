@@ -90,4 +90,21 @@ abstract class AbstractMedium implements Medium
         assert titel != null : "Vorbedingung verletzt: titel != null";
         _titel = titel;
     }
+
+    /**
+     * Berechnet die Mietgebühr in Eurocent für eine angegebene Mietdauer in Tagen
+     *
+     * @param mietTage Die Anzahl der Ausleihtage eines Mediums
+     * @return Die Mietgebühr in Eurocent als Geldbetrag
+     *
+     * @require mietTage > 0
+     *
+     * @ensure result != null
+     */
+    public Geldbetrag berechneMietgebuehr(int mietTage)
+    {
+        assert mietTage > 0: "Vorbedingung verletzt: mietTage > 0";
+
+        return Geldbetrag.get(300 * mietTage);
+    }
 }

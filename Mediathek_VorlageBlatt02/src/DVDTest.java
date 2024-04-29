@@ -69,6 +69,14 @@ public class DVDTest
         Medium medium = getMedium();
         assertNotNull(medium.getFormatiertenString());
     }
+    @Test
+    public void testBerechneMietgebuehr()
+    {
+        int euro = _dvd1.berechneMietgebuehr(4).getEuroAnteil();
+        int cent = _dvd1.berechneMietgebuehr(4).getCentAnteil();
+        assertEquals("Falscher EuroAnteil",12, euro);
+        assertEquals("Falscher CentAnteil",0, cent);
+    }
 
     protected DVD getMedium()
     {

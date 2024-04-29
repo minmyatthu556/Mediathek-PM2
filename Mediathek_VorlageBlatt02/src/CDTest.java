@@ -70,6 +70,15 @@ public class CDTest
         assertNotNull(medium.getFormatiertenString());
     }
 
+    @Test
+    public void testBerechneMietgebuehr()
+    {
+        int euro = _cd1.berechneMietgebuehr(4).getEuroAnteil();
+        int cent = _cd1.berechneMietgebuehr(4).getCentAnteil();
+        assertEquals("Falscher EuroAnteil",12, euro);
+        assertEquals("Falscher CentAnteil",0, cent);
+    }
+
     private CD getMedium()
     {
         return new CD(TITEL, KOMMENTAR, INTERPRET, LAENGE);
