@@ -1,16 +1,16 @@
 /**
- * {@link Videospiel} ist ein {@link Medium} mit einer zusätzlichen
+ * {@link AbstractVideospiel} ist ein {@link Medium} mit einer zusätzlichen
  * Informationen zum kompatiblen System.
  * 
  * @author SE2-Team, PR2-Team, PR2-Team
  * @version SoSe 2024
  */
-class Videospiel extends AbstractMedium
+public abstract class AbstractVideospiel extends AbstractMedium
 {
     /**
      * Das System, auf dem das Spiel lauffähig ist
      */
-    private String _system;
+    private final String _system;
 
     /**
      * Initialisiert ein neues Videospiel.
@@ -30,7 +30,7 @@ class Videospiel extends AbstractMedium
      * @ensure getKommentar() == kommentar
      * @ensure getSystem() == system
      */
-    public Videospiel(String titel, String kommentar, String system)
+    public AbstractVideospiel(String titel, String kommentar, String system)
     {
         super(kommentar, titel);
 
@@ -65,20 +65,14 @@ class Videospiel extends AbstractMedium
     }
 
     @Override
-    /**
-     * Berechnet die Mietgebühr in Eurocent für eine angegebene Mietdauer in Tagen
-     *
-     * @param mietTage Die Anzahl der Ausleihtage eines Mediums
-     * @return Die Mietgebühr in Eurocent als Geldbetrag
-     *
-     * @require mietTage > 0
-     *
-     * @ensure result != null
-     */
     public Geldbetrag berechneMietgebuehr(int mietTage)
     {
         assert mietTage > 0: "Vorbedingung verletzt: mietTage > 0";
 
-        return Geldbetrag.get(200 * mietTage);
+        int basispreis = 200 * mietTage;
+        int total = basispreis + getPreisNachTagen(mietTage);
+        return Geldbetrag.get(total);
     }
+
+    public abstract int getPreisNachTagen(int tage);
 }

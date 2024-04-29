@@ -183,28 +183,28 @@ class MedienEinleser
         // Die folgenden Kommentarzeichen entfernen, um PC- und
         // Konsolen-Videospiele in der Mediathek zu haben, und
         // den anschließenden else-Zweig auskommentieren.
-        // else if (medienBezeichnung.equals("KonsolenVideospiel")
-        // || medienBezeichnung.equals("PCVideospiel"))
-        // {
-        // String system = naechsterToken(tokenizer);
-        //
-        // if (medienBezeichnung.equals("KonsolenVideospiel"))
-        // {
-        // medium = new KonsolenVideospiel(titel, kommentar, system);
-        // }
-        // else if (medienBezeichnung.equals("PCVideospiel"))
-        // {
-        // medium = new PCVideospiel(titel, kommentar, system);
-        // }
-        // }
-        // Diesen else-Zweig auskommentieren, sobald
-        // PC- und Konsolen-Videospiele existieren.
-        else if (medienBezeichnung.equals("Videospiel"))
+        else if (medienBezeichnung.equals("KonsolenVideospiel")
+                || medienBezeichnung.equals("PCVideospiel"))
         {
             String system = naechsterToken(tokenizer);
 
-            medium = new Videospiel(titel, kommentar, system);
+            if (medienBezeichnung.equals("KonsolenVideospiel"))
+            {
+                medium = new KonsolenVideospiel(titel, kommentar, system);
+            }
+            else if (medienBezeichnung.equals("PCVideospiel"))
+            {
+                medium = new PCVideospiel(titel, kommentar, system);
+            }
         }
+        // Diesen else-Zweig auskommentieren, sobald
+        // PC- und Konsolen-Videospiele existieren.
+        // else if (medienBezeichnung.equals("Videospiel"))
+        // {
+        //     String system = naechsterToken(tokenizer);
+
+        //     medium = new Videospiel(titel, kommentar, system);
+        // }
         return medium;
     }
 
