@@ -5,52 +5,27 @@ import org.junit.Test;
 
 /**
  */
-public class PCVideospielTest
+public class PCVideospielTest extends AbstractVideospielTest
 {
-    private static final String KOMMENTAR = "Kommentar";
-    private static final String TITEL = "Titel";
-    private static final String BEZEICHNUNG = "Videospiel";
     private static final String SYSTEM = "PC";
-    private final PCVideospiel _videospiel;
+    private final AbstractVideospiel _videospiel = super.getExamplar();
 
-    public PCVideospielTest()
-    {
-        _videospiel = getPC();
-    }
-
-    @Test
-    public void testeVideospiel()
-    {
-        assertEquals(TITEL, _videospiel.getTitel());
-        assertEquals(KOMMENTAR, _videospiel.getKommentar());
-        assertEquals(SYSTEM, _videospiel.getSystem());
-    }
-
-    @Test
-    public void testGetMedienBezeichnung()
-    {
-        assertEquals(BEZEICHNUNG, _videospiel.getMedienBezeichnung());
-    }
-
-    protected PCVideospiel getPC()
-    {
+    @Override
+    protected PCVideospiel getMedium() {
         return new PCVideospiel(TITEL, KOMMENTAR, SYSTEM);
     }
 
     @Test
-    public final void testSetKommentar()
-    {
-        PCVideospiel medium = getPC();
-        medium.setKommentar("Kommentar2");
-        assertEquals(medium.getKommentar(), "Kommentar2");
+    public void testKonstruktor() {
+        assertEquals(SYSTEM, _videospiel.getSystem());
     }
 
     @Test
-    public final void testSetTitel()
+    public void testSetSystem()
     {
-        PCVideospiel pc = getPC();
-        pc.setTitel("Titel2");
-        assertEquals(pc.getTitel(), "Titel2");
+        PCVideospiel medium = getMedium();
+        medium.setSystem("System2");
+        assertEquals(medium.getSystem(), "System2");
     }
 
     @Test

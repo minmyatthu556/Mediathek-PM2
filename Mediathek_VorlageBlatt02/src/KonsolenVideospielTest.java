@@ -5,52 +5,27 @@ import org.junit.Test;
 
 /**
  */
-public class KonsolenVideospielTest
+public class KonsolenVideospielTest extends AbstractVideospielTest
 {
-    private static final String KOMMENTAR = "Kommentar";
-    private static final String TITEL = "Titel";
-    private static final String BEZEICHNUNG = "Videospiel";
     private static final String SYSTEM = "Konsole";
-    private final KonsolenVideospiel _videospiel;
+    private final AbstractVideospiel _videospiel = super.getExamplar();
 
-    public KonsolenVideospielTest()
-    {
-        _videospiel = getKonsole();
-    }
-
-    @Test
-    public void testeVideospiel()
-    {
-        assertEquals(TITEL, _videospiel.getTitel());
-        assertEquals(KOMMENTAR, _videospiel.getKommentar());
-        assertEquals(SYSTEM, _videospiel.getSystem());
-    }
-
-    @Test
-    public void testGetMedienBezeichnung()
-    {
-        assertEquals(BEZEICHNUNG, _videospiel.getMedienBezeichnung());
-    }
-
-    protected KonsolenVideospiel getKonsole()
-    {
+    @Override
+    protected KonsolenVideospiel getMedium() {
         return new KonsolenVideospiel(TITEL, KOMMENTAR, SYSTEM);
     }
 
     @Test
-    public final void testSetKommentar()
-    {
-        KonsolenVideospiel medium = getKonsole();
-        medium.setKommentar("Kommentar2");
-        assertEquals(medium.getKommentar(), "Kommentar2");
+    public void testKonstruktor() {
+        assertEquals(SYSTEM, _videospiel.getSystem());
     }
 
     @Test
-    public final void testSetTitel()
+    public void testSetSystem()
     {
-        KonsolenVideospiel pc = getKonsole();
-        pc.setTitel("Titel2");
-        assertEquals(pc.getTitel(), "Titel2");
+        KonsolenVideospiel medium = getMedium();
+        medium.setSystem("System2");
+        assertEquals(medium.getSystem(), "System2");
     }
 
     @Test

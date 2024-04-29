@@ -10,7 +10,7 @@ public abstract class AbstractVideospiel extends AbstractMedium
     /**
      * Das System, auf dem das Spiel lauffähig ist
      */
-    private final String _system;
+    private String _system;
 
     /**
      * Initialisiert ein neues Videospiel.
@@ -21,7 +21,7 @@ public abstract class AbstractVideospiel extends AbstractMedium
      *            Ein Kommentar zum Spiel
      * @param system
      *            Die Bezeichnung des System
-     * 
+     *
      * @require titel != null
      * @require kommentar != null
      * @require system != null
@@ -46,14 +46,21 @@ public abstract class AbstractVideospiel extends AbstractMedium
 
     /**
      * Gibt das System zurück, auf dem das Spiel lauffähig ist.
-     * 
+     *
      * @return Das System, auf dem das Spiel ausgeführt werden kann.
-     * 
+     *
      * @ensure result != null
      */
     public String getSystem()
     {
         return _system;
+    }
+
+    public void setSystem(String system)
+    {
+        assert system != null : "Vorbedingung verletzt: system != null";
+
+        _system = system;
     }
 
     @Override
