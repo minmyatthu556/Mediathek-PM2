@@ -23,3 +23,29 @@ am 30.4.2024 verliehen an
     Julianenallee 22
     24103 Kiel
 
+Ausleihe - DVD:
+    Titel: Shape of Water
+    Kommentar: Der mit einem Oscar ausgezeichnete Blockbuster
+    Regisseur: Guillermo Del Toro
+    Laufzeit: 110
+am 30.4.2024 verliehen an
+    Kundennummer: 123459
+    Name: Julia Schmidt
+    Telefon: unbekannt
+    Anschrift:
+    Julianenallee 22
+    24103 Kiel
+
+Rückgabe - DVD:
+    Titel: Thor: Tag der Entscheidung
+    Kommentar: Thor verliert seinen Hammer. Wie soll er jetzt die Welt retten?
+    Regisseur: Taika Waititi
+    Laufzeit: 140
+am 27.4.2024 verliehen an
+    Kundennummer: 123456
+    Name: Susi Sonnenschein
+    Telefon: unbekannt
+    Anschrift:
+    Sonnenallee 20
+    22760 Hamburg
+
