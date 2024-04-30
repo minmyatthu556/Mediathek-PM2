@@ -8,7 +8,7 @@ import org.junit.Test;
 public class PCVideospielTest extends AbstractVideospielTest
 {
     private static final String SYSTEM = "PC";
-    private final AbstractVideospiel _videospiel = super.getExamplar();
+    private final PCVideospiel _videospiel = (PCVideospiel) super.getExamplar();
 
     @Override
     protected PCVideospiel getMedium() {
@@ -26,6 +26,12 @@ public class PCVideospielTest extends AbstractVideospielTest
         PCVideospiel medium = getMedium();
         medium.setSystem("System2");
         assertEquals(medium.getSystem(), "System2");
+    }
+
+    @Test
+    public void testGetSystem()
+    {
+        assertEquals(SYSTEM, _videospiel.getSystem());
     }
 
     @Test
