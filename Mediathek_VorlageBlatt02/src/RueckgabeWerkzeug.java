@@ -4,6 +4,7 @@ import java.util.List;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 
@@ -121,9 +122,24 @@ public class RueckgabeWerkzeug
     {
         List<Verleihkarte> verleihkarten = getSelectedVerleihkarten();
         List<Medium> medien = new ArrayList<Medium>();
+
         for (Verleihkarte verleihkarte : verleihkarten)
         {
             medien.add(verleihkarte.getMedium());
+            try
+            {
+                VerleihProtokollierer verleihProtokollierer = new VerleihProtokollierer();
+                verleihProtokollierer.protokolliere(VerleihEreignis.RUECKGABE, verleihkarte);
+            }
+            catch (ProtokollierException e)
+            {
+                // Fehlermeldung in einem Alert-Dialog anzeigen
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Fehler beim Ausleihen");
+                alert.setHeaderText("Fehler beim Ausleihen von Medien");
+                alert.setContentText(e.getMessage());
+                alert.showAndWait();
+            }
         }
         _verleihService.nimmZurueck(medien, Datum.heute());
     }

@@ -1,3 +1,5 @@
+import javafx.scene.control.Alert;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,6 +32,8 @@ class VerleihServiceImpl extends AbstractObservableService implements
      */
     private KundenstammService _kundenstamm;
 
+    private VerleihProtokollierer _verleihProtokollierer;
+
     /**
      * Konstruktor. Erzeugt einen neuen VerleihServiceImpl.
      * 
@@ -54,6 +58,7 @@ class VerleihServiceImpl extends AbstractObservableService implements
         _verleihkarten = erzeugeVerleihkartenBestand(initialBestand);
         _kundenstamm = kundenstamm;
         _medienbestand = medienbestand;
+        _verleihProtokollierer = new VerleihProtokollierer();
     }
 
     /**

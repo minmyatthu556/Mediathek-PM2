@@ -1,0 +1,25 @@
+Rückgabe - Videospiel:
+    Titel: Dark Souls III
+    Kommentar: Kein Spiel für jemanden mit einem niedrigen Frustrationslevel
+    System: Xbox One
+am 29.4.2024 verliehen an
+    Kundennummer: 123460
+    Name: Katarina Klum
+    Telefon: unbekannt
+    Anschrift:
+    Ottensener Strasse 10
+    22761 Hamburg
+
+Ausleihe - DVD:
+    Titel: Shape of Water
+    Kommentar: Der mit einem Oscar ausgezeichnete Blockbuster
+    Regisseur: Guillermo Del Toro
+    Laufzeit: 110
+am 30.4.2024 verliehen an
+    Kundennummer: 123459
+    Name: Julia Schmidt
+    Telefon: unbekannt
+    Anschrift:
+    Julianenallee 22
+    24103 Kiel
+

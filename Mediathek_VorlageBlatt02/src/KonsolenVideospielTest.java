@@ -8,7 +8,7 @@ import org.junit.Test;
 public class KonsolenVideospielTest extends AbstractVideospielTest
 {
     private static final String SYSTEM = "Konsole";
-    private final AbstractVideospiel _videospiel = super.getExamplar();
+    private final KonsolenVideospiel _videospiel = (KonsolenVideospiel) super.getExamplar();
 
     @Override
     protected KonsolenVideospiel getMedium() {
@@ -17,6 +17,12 @@ public class KonsolenVideospielTest extends AbstractVideospielTest
 
     @Test
     public void testKonstruktor() {
+        assertEquals(SYSTEM, _videospiel.getSystem());
+    }
+
+    @Test
+    public void testGetSystem()
+    {
         assertEquals(SYSTEM, _videospiel.getSystem());
     }
 

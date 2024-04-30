@@ -21,4 +21,10 @@ public abstract class AbstractVideospielTest extends AbstractMediumTest
     public void testGetMedienBezeichnung() {
         assertEquals(BEZEICHNUNG, _videospiel.getMedienBezeichnung());
     }
+
+    @Test
+    public abstract void testGetSystem();
+
+    @Test
+    public abstract void testSetSystem();
 }
