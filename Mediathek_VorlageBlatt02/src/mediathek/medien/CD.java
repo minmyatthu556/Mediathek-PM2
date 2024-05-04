@@ -1,4 +1,4 @@
-package mediathek;
+package mediathek.medien;
 
 /**
  * Eine CD ist ein Medium. Zusätzlich zu den Eigenschaften eines Mediums erfasst
@@ -7,7 +7,7 @@ package mediathek;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-class CD extends AbstractMedium
+public class CD extends AbstractMedium
 {
     /**
      * Der Interpret der CD

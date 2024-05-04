@@ -1,4 +1,6 @@
-package mediathek;
+package mediathek.medien;
+
+import mediathek.Geldbetrag;
 
 /**
  * {@link AbstractVideospiel} ist ein {@link Medium} mit einer zusätzlichen

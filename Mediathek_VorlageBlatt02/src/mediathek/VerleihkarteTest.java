@@ -8,6 +8,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import mediathek.medien.CD;
+import mediathek.medien.Medium;
+
 public class VerleihkarteTest
 {
     private Datum _datum;

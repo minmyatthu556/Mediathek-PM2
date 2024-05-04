@@ -5,6 +5,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import mediathek.medien.CD;
+import mediathek.medien.DVD;
+import mediathek.medien.PCVideospiel;
+
 /**
  * Testklasse für den MedienComparator
  * 

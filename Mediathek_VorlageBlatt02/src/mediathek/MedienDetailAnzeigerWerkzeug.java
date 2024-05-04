@@ -3,6 +3,7 @@ package mediathek;
 import java.util.List;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
+import mediathek.medien.Medium;
 
 /**
  * Ein MedienDetailAnzeigerWerkzeug ist ein Werkzeug um die Details von Medien

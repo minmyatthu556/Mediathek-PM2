@@ -1,6 +1,7 @@
 package mediathek;
 
 import javafx.scene.control.Alert;
+import mediathek.medien.Medium;
 
 import java.util.ArrayList;
 import java.util.HashMap;

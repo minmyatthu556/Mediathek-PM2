@@ -2,6 +2,8 @@ package mediathek;
 
 import java.util.List;
 
+import mediathek.medien.Medium;
+
 /**
  * Ein Medienbestand-Service ist ein Service, der alle zur Verfügung stehenden
  * Medien enthält. Diese können in den Bestand eingepflegt, gelöscht und

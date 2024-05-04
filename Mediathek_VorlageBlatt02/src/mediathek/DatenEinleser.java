@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import mediathek.medien.Medium;
+
 /**
  * Ein DatenEinleser kann verwendet werden um Kunden, Medien und Verleihkarten
  * einzulesen.

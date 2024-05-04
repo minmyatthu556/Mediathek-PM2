@@ -9,6 +9,9 @@ import java.util.List;
 
 import org.junit.Test;
 
+import mediathek.medien.CD;
+import mediathek.medien.Medium;
+
 public class MedienbestandServiceImplTest
 {
 

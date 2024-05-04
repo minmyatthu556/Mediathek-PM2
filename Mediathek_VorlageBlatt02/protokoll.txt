@@ -49,3 +49,15 @@ am 27.4.2024 verliehen an
     Sonnenallee 20
     22760 Hamburg
 
+Ausleihe - Videospiel:
+    Titel: FIFA 18
+    Kommentar: Geh in FIFA 18 auf den Platz und spiel professionellen Fußball, so wie du ihn dir vorstellst.
+    System: Playstation 4
+am 4.5.2024 verliehen an
+    Kundennummer: 123461
+    Name: Anna Kurnikowa
+    Telefon: unbekannt
+    Anschrift:
+    Osterweg 1
+    22670 Hamburg
+

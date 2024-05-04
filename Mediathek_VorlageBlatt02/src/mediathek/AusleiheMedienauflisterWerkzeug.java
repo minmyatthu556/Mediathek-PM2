@@ -7,6 +7,7 @@ import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.layout.Pane;
+import mediathek.medien.Medium;
 
 /**
  * Ein AusleiheMedienauflisterWerkzeug ist ein Werkzeug zum Auflisten von Medien

@@ -3,6 +3,8 @@ package mediathek;
 import java.util.ArrayList;
 import java.util.List;
 
+import mediathek.medien.Medium;
+
 /**
  * Ein Medienbestand enthält alle zur Verfügung stehenden Medien. Diese können
  * in den Bestand eingepflegt, gelöscht und verändert werden. Zu einem

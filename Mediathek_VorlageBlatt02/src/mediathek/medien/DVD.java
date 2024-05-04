@@ -1,4 +1,4 @@
-package mediathek;
+package mediathek.medien;
 
 /**
  * Eine {@link DVD} ist ein Medium. Zusätzlich zu den Eigenschaften eines
@@ -8,7 +8,7 @@ package mediathek;
  * @version SoSe 2024
  * 
  */
-class DVD extends AbstractMedium
+public class DVD extends AbstractMedium
 {
     /**
      * Die Laufzeit des Hauptteils der DVD (in Minuten).

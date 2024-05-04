@@ -8,6 +8,7 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
+import mediathek.medien.Medium;
 
 /**
  * Ein RueckgabeWerkzeug stellt die Funktionalität der Rücknahme für die

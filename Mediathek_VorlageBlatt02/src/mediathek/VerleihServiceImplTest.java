@@ -10,6 +10,9 @@ import java.util.List;
 
 import org.junit.Test;
 
+import mediathek.medien.CD;
+import mediathek.medien.Medium;
+
 /**
  * @author SE2-Team, PR2-Team, PR2-Team
  * @version SoSe 2024

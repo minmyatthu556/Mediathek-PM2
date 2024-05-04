@@ -1,4 +1,6 @@
-package mediathek;
+package mediathek.medien;
+
+import mediathek.Geldbetrag;
 
 abstract class AbstractMedium implements Medium
 {

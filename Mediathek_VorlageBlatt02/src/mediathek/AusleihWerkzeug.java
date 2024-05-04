@@ -4,6 +4,7 @@ import java.util.List;
 
 import javafx.scene.control.Alert;
 import javafx.scene.layout.Pane;
+import mediathek.medien.Medium;
 
 /**
  * Ein AusleihWerkzeug stellt die Funktionalität der Ausleihe für die

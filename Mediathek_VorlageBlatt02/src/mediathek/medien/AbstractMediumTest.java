@@ -1,4 +1,4 @@
-package mediathek;
+package mediathek.medien;
 
 import org.junit.Test;
 

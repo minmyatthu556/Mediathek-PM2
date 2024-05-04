@@ -2,6 +2,8 @@ package mediathek;
 
 import java.util.List;
 
+import mediathek.medien.Medium;
+
 /**
  * Der VerleihService erlaubt es, Medien auszuleihen und zurückzugeben.
  * 

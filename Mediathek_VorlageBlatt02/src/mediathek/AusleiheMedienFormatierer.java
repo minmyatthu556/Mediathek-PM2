@@ -1,5 +1,7 @@
 package mediathek;
 
+import mediathek.medien.Medium;
+
 /**
  * Der Formatierer für Medien in der Ausleiheansicht.
  * 

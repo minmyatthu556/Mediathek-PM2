@@ -1,5 +1,7 @@
 package mediathek;
 
+import mediathek.medien.Medium;
+
 /**
  * Mit Hilfe von Verleihkarten werden beim Verleih eines Mediums alle relevanten
  * Daten notiert.

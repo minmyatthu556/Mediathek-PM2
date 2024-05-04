@@ -1,4 +1,4 @@
-package mediathek;
+package mediathek.medien;
 
 public class PCVideospiel extends AbstractVideospiel
 {

@@ -12,6 +12,12 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import mediathek.medien.CD;
+import mediathek.medien.DVD;
+import mediathek.medien.KonsolenVideospiel;
+import mediathek.medien.Medium;
+import mediathek.medien.PCVideospiel;
+
 /**
  * Liest Medien aus einer Textdatei ein. Der MedienEinleser kann CDs, DVDs,
  * KonsolenVideospiele und PCVideospiele einlesen. Eine Zeile in der Textdatei

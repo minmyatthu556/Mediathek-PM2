@@ -1,4 +1,6 @@
-package mediathek;
+package mediathek.medien;
+
+import mediathek.Geldbetrag;
 
 /**
  * Ein Medium definiert Eigenschaften, die alle Medien unserer Mediathek
@@ -8,7 +10,7 @@ package mediathek;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-interface Medium
+public interface Medium
 {
 
     /**

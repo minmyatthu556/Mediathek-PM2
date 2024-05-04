@@ -3,6 +3,8 @@ package mediathek;
 import java.io.Serializable;
 import java.util.Comparator;
 
+import mediathek.medien.Medium;
+
 /**
  * Comparator-Klasse um zwei MedienF zu vergleichen, damit sie an der UI
  * sortiert angezeigt werden können.
