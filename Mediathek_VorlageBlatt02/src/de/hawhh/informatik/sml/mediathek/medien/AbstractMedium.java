@@ -2,7 +2,7 @@ package de.hawhh.informatik.sml.mediathek.medien;
 
 import de.hawhh.informatik.sml.mediathek.Geldbetrag;
 
-abstract class AbstractMedium implements Medium
+public abstract class AbstractMedium implements Medium
 {
     private String _kommentar;
     private String _titel;

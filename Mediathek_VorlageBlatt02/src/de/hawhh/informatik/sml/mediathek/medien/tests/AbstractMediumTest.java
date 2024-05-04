@@ -1,6 +1,9 @@
-package de.hawhh.informatik.sml.mediathek.medien;
+package de.hawhh.informatik.sml.mediathek.medien.tests;
 
 import org.junit.Test;
+
+import de.hawhh.informatik.sml.mediathek.medien.AbstractMedium;
+import de.hawhh.informatik.sml.mediathek.medien.Medium;
 
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotNull;

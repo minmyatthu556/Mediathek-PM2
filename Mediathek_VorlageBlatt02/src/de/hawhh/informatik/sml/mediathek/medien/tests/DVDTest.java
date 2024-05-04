@@ -1,8 +1,10 @@
-package de.hawhh.informatik.sml.mediathek.medien;
+package de.hawhh.informatik.sml.mediathek.medien.tests;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+
+import de.hawhh.informatik.sml.mediathek.medien.DVD;
 
 public class DVDTest extends AbstractMediumTest
 {
