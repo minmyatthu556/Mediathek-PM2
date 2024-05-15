@@ -41,8 +41,6 @@ public class VerleihServiceImpl extends AbstractObservableService implements
      */
     private KundenstammService _kundenstamm;
 
-    private VerleihProtokollierer _verleihProtokollierer;
-
     /**
      * Konstruktor. Erzeugt einen neuen VerleihServiceImpl.
      * 
@@ -67,7 +65,7 @@ public class VerleihServiceImpl extends AbstractObservableService implements
         _verleihkarten = erzeugeVerleihkartenBestand(initialBestand);
         _kundenstamm = kundenstamm;
         _medienbestand = medienbestand;
-        _verleihProtokollierer = new VerleihProtokollierer();
+        new VerleihProtokollierer();
     }
 
     /**
