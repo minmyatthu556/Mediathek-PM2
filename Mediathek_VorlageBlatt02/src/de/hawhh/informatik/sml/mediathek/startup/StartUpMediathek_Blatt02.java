@@ -3,7 +3,6 @@ package de.hawhh.informatik.sml.mediathek.startup;
 import java.io.File;
 
 import de.hawhh.informatik.sml.mediathek.exceptions.DateiLeseException;
-import de.hawhh.informatik.sml.mediathek.service.*;
 import de.hawhh.informatik.sml.mediathek.service.einleser.DatenEinleser;
 import de.hawhh.informatik.sml.mediathek.service.kundenstamm.KundenstammService;
 import de.hawhh.informatik.sml.mediathek.service.kundenstamm.KundenstammServiceImpl;
