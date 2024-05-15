@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.medienDetailAnzeiger;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import javafx.scene.layout.Pane;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-class MedienDetailAnzeigerWerkzeug
+public class MedienDetailAnzeigerWerkzeug
 {
     private MedienDetailAnzeigerUI _ui;
 

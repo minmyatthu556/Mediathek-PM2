@@ -1,4 +1,7 @@
-package de.hawhh.informatik.sml.mediathek.materialien.medien;
+package de.hawhh.informatik.sml.mediathek.materialien.medien.dvd;
+
+import de.hawhh.informatik.sml.mediathek.materialien.medien.AbstractMedium;
+import de.hawhh.informatik.sml.mediathek.materialien.medien.Medium;
 
 /**
  * Eine {@link DVD} ist ein Medium. Zusätzlich zu den Eigenschaften eines

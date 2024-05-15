@@ -1,13 +1,13 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.rueckgabe;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import de.hawhh.informatik.sml.mediathek.ProtokollierException;
-import de.hawhh.informatik.sml.mediathek.VerleihEreignis;
-import de.hawhh.informatik.sml.mediathek.VerleihProtokollierer;
-import de.hawhh.informatik.sml.mediathek.VerleihService;
-import de.hawhh.informatik.sml.mediathek.Verleihkarte;
+import de.hawhh.informatik.sml.mediathek.exceptions.ProtokollierException;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.VerleihEreignis;
+import de.hawhh.informatik.sml.mediathek.exceptions.VerleihProtokollierer;
+import de.hawhh.informatik.sml.mediathek.materialien.verleihkarte.Verleihkarte;
+import de.hawhh.informatik.sml.mediathek.service.verleih.VerleihService;
 import de.hawhh.informatik.sml.mediathek.fachwerte.datum.Datum;
 import de.hawhh.informatik.sml.mediathek.materialien.medien.Medium;
 import javafx.collections.FXCollections;

@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.fachwerte;
+package de.hawhh.informatik.sml.mediathek.fachwerte.datum;
 
 import java.util.Calendar;
 import java.util.TimeZone;
@@ -7,7 +7,7 @@ import java.util.TimeZone;
  * Ein Kalenderdatum, bestehend aus Tag, Monat und Jahr.
  * 
  * Das Klassenobjekt stellt zwei Hilfsmethoden zur Verfügung, um das heutige
- * Datum zu ermitteln und zu überprüfen, ob drei Ganzzahlen ein gültiges Datum
+ * datum zu ermitteln und zu überprüfen, ob drei Ganzzahlen ein gültiges datum
  * bilden.
  * 
  * @author SE2-Team, PM2-Team
@@ -39,7 +39,7 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Wählt ein Datum aus (tag, monat, jahr).
+     * Wählt ein datum aus (tag, monat, jahr).
      * 
      * @param tag
      *            Der Tag im Monat (1..31)
@@ -69,7 +69,7 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Liefert das heutige Datum zurück.
+     * Liefert das heutige datum zurück.
      * 
      * @ensure result != null
      */
@@ -88,7 +88,7 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Prüft, ob das durch Tag, Monat und Jahr angegebene Datum gültig ist.
+     * Prüft, ob das durch Tag, Monat und Jahr angegebene datum gültig ist.
      * 
      * @param tag
      *            Der Tag im Monat (1..31).
@@ -96,7 +96,7 @@ public final class Datum implements Comparable<Datum>
      *            Der Monat im Jahr (1..12).
      * @param jahr
      *            Das Jahr.
-     * @return true wenn drei übergebene Zahlen ein gültiges Datum ergeben,
+     * @return true wenn drei übergebene Zahlen ein gültiges datum ergeben,
      *         ansonsten false.
      */
     public static boolean istGueltig(int tag, int monat, int jahr)
@@ -117,12 +117,12 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Vergleicht dieses Datum mit einem anderen Datum.
+     * Vergleicht dieses datum mit einem anderen datum.
      * 
      * @param datum
-     *            das andere Datum.
-     * @return einen Wert < 0 falls dieses Datum kleiner als datum ist, einen
-     *         Wert > 0, falls dieses Datum größer als datum ist, sonst 0.
+     *            das andere datum.
+     * @return einen Wert < 0 falls dieses datum kleiner als datum ist, einen
+     *         Wert > 0, falls dieses datum größer als datum ist, sonst 0.
      */
     @Override
     public int compareTo(Datum datum)
@@ -131,7 +131,7 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Vergleicht dieses Datum auf Gleichheit. Zwei Datum-Objekte sind gleich,
+     * Vergleicht dieses datum auf Gleichheit. Zwei datum-Objekte sind gleich,
      * wenn der Tag, der Monat und das Jahr gleich sind.
      * 
      * @param o
@@ -185,8 +185,8 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Subtrahiert von diesem Datum eine übergebene Anzahl an Tagen und gibt das
-     * Ergebnis als neues Datum zurück.
+     * Subtrahiert von diesem datum eine übergebene Anzahl an Tagen und gibt das
+     * Ergebnis als neues datum zurück.
      * 
      * @param tage
      *            Die abzuziehenden Tage
@@ -212,8 +212,8 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Addiert auf dieses Datum eine übergebene Anzahl von Tage und gibt das
-     * Ergebnis als neues Datum zurück.
+     * Addiert auf dieses datum eine übergebene Anzahl von Tage und gibt das
+     * Ergebnis als neues datum zurück.
      * 
      * @param tage
      *            Die zu addierenden Tage
@@ -259,7 +259,7 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Berechnet, wie viele Tage seit dem angegebenen Datum bis zu diesem Datum
+     * Berechnet, wie viele Tage seit dem angegebenen datum bis zu diesem datum
      * vergangen sind.
      * 
      * @param startDatum
@@ -278,7 +278,7 @@ public final class Datum implements Comparable<Datum>
     }
 
     /**
-     * Gibt dieses Datum in Millisekunden zurück.
+     * Gibt dieses datum in Millisekunden zurück.
      */
     private long inMillisekunden()
     {

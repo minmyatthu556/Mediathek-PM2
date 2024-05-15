@@ -1,4 +1,6 @@
-package de.hawhh.informatik.sml.mediathek.materialien.medien;
+package de.hawhh.informatik.sml.mediathek.materialien.medien.cd;
+
+import de.hawhh.informatik.sml.mediathek.materialien.medien.AbstractMedium;
 
 /**
  * Eine CD ist ein Medium. Zusätzlich zu den Eigenschaften eines Mediums erfasst

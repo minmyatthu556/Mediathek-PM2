@@ -1,7 +1,8 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.kundenauflister;
 
-import de.hawhh.informatik.sml.mediathek.Kunde;
-import de.hawhh.informatik.sml.mediathek.KundenstammService;
+import de.hawhh.informatik.sml.mediathek.materialien.kunde.Kunde;
+import de.hawhh.informatik.sml.mediathek.service.kundenstamm.KundenstammService;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.ObservableSubWerkzeug;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.layout.Pane;
@@ -15,7 +16,7 @@ import javafx.scene.layout.Pane;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-class KundenauflisterWerkzeug extends ObservableSubWerkzeug
+public class KundenauflisterWerkzeug extends ObservableSubWerkzeug
 {
     private KundenauflisterUI _ui;
     private KundenstammService _kundenstamm;

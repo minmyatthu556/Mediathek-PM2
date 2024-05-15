@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.fachwerte;
+package de.hawhh.informatik.sml.mediathek.fachwerte.geldbetrag;
 
 /**
  * Ein Geldbetrag in Euro, gespeichert als ganze Euro- und ganze Cent-Beträge.

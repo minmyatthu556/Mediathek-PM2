@@ -1,6 +1,6 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.medienDetailAnzeiger;
 
-import de.hawhh.informatik.sml.mediathek.UIConstants;
+import de.hawhh.informatik.sml.mediathek.constants.UIConstants;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;

@@ -1,6 +1,8 @@
-package de.hawhh.informatik.sml.mediathek.materialien.medien;
+package de.hawhh.informatik.sml.mediathek.materialien.medien.videospiel;
 
 import de.hawhh.informatik.sml.mediathek.fachwerte.geldbetrag.Geldbetrag;
+import de.hawhh.informatik.sml.mediathek.materialien.medien.AbstractMedium;
+import de.hawhh.informatik.sml.mediathek.materialien.medien.Medium;
 
 /**
  * {@link AbstractVideospiel} ist ein {@link Medium} mit einer zusätzlichen

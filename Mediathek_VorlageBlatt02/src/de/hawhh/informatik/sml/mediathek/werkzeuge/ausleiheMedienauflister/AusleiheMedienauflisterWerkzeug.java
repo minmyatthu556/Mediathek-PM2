@@ -1,13 +1,14 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.ausleiheMedienauflister;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import de.hawhh.informatik.sml.mediathek.AusleiheMedienFormatierer;
-import de.hawhh.informatik.sml.mediathek.MedienbestandService;
-import de.hawhh.informatik.sml.mediathek.ServiceObserver;
-import de.hawhh.informatik.sml.mediathek.VerleihService;
+import de.hawhh.informatik.sml.mediathek.materialien.medien.auslieheMedienFormatierer.AusleiheMedienFormatierer;
+import de.hawhh.informatik.sml.mediathek.service.medienbestand.MedienbestandService;
+import de.hawhh.informatik.sml.mediathek.service.observers.ServiceObserver;
+import de.hawhh.informatik.sml.mediathek.service.verleih.VerleihService;
 import de.hawhh.informatik.sml.mediathek.materialien.medien.Medium;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.ObservableSubWerkzeug;
 import javafx.beans.InvalidationListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,7 +24,7 @@ import javafx.scene.layout.Pane;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-class AusleiheMedienauflisterWerkzeug extends ObservableSubWerkzeug
+public class AusleiheMedienauflisterWerkzeug extends ObservableSubWerkzeug
 {
     private AusleiheMedienauflisterUI _ui;
     private MedienbestandService _medienbestand;

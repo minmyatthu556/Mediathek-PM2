@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek;
+package de.hawhh.informatik.sml.mediathek.werkzeuge;
 
 import java.util.HashSet;
 import java.util.Set;

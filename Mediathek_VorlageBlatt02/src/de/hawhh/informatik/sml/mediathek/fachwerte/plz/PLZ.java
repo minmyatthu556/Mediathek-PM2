@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.fachwerte;
+package de.hawhh.informatik.sml.mediathek.fachwerte.plz;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

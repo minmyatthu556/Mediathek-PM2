@@ -1,18 +1,22 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.ausleihe;
 
-import de.hawhh.informatik.sml.mediathek.Kunde;
+import de.hawhh.informatik.sml.mediathek.materialien.kunde.Kunde;
 import java.util.List;
 
-import de.hawhh.informatik.sml.mediathek.KundenstammService;
-import de.hawhh.informatik.sml.mediathek.MedienbestandService;
-import de.hawhh.informatik.sml.mediathek.ProtokollierException;
-import de.hawhh.informatik.sml.mediathek.ServiceObserver;
-import de.hawhh.informatik.sml.mediathek.VerleihEreignis;
-import de.hawhh.informatik.sml.mediathek.VerleihProtokollierer;
-import de.hawhh.informatik.sml.mediathek.VerleihService;
-import de.hawhh.informatik.sml.mediathek.Verleihkarte;
+import de.hawhh.informatik.sml.mediathek.exceptions.ProtokollierException;
+import de.hawhh.informatik.sml.mediathek.service.kundenstamm.KundenstammService;
+import de.hawhh.informatik.sml.mediathek.service.medienbestand.MedienbestandService;
+import de.hawhh.informatik.sml.mediathek.service.observers.ServiceObserver;
+import de.hawhh.informatik.sml.mediathek.service.verleih.VerleihService;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.VerleihEreignis;
+import de.hawhh.informatik.sml.mediathek.exceptions.VerleihProtokollierer;
+import de.hawhh.informatik.sml.mediathek.materialien.verleihkarte.Verleihkarte;
 import de.hawhh.informatik.sml.mediathek.fachwerte.datum.Datum;
 import de.hawhh.informatik.sml.mediathek.materialien.medien.Medium;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.kundenDetailAnzeiger.KundenDetailAnzeigerWerkzeug;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.kundenauflister.KundenauflisterWerkzeug;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.medienDetailAnzeiger.MedienDetailAnzeigerWerkzeug;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.SubWerkzeugObserver;
 import de.hawhh.informatik.sml.mediathek.werkzeuge.ausleiheMedienauflister.AusleiheMedienauflisterWerkzeug;
 import javafx.scene.control.Alert;
 import javafx.scene.layout.Pane;
@@ -24,7 +28,7 @@ import javafx.scene.layout.Pane;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-class AusleihWerkzeug
+public class AusleihWerkzeug
 {
     /**
      * Die UI-Komponente der Ausleihe.

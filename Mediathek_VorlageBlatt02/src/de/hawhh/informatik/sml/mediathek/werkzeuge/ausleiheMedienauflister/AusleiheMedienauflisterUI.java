@@ -1,7 +1,7 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.ausleiheMedienauflister;
 
-import de.hawhh.informatik.sml.mediathek.AusleiheMedienFormatierer;
-import de.hawhh.informatik.sml.mediathek.UIConstants;
+import de.hawhh.informatik.sml.mediathek.materialien.medien.auslieheMedienFormatierer.AusleiheMedienFormatierer;
+import de.hawhh.informatik.sml.mediathek.constants.UIConstants;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;

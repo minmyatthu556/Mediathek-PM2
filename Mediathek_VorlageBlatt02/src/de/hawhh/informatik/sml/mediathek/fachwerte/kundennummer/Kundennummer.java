@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.fachwerte;
+package de.hawhh.informatik.sml.mediathek.fachwerte.kundennummer;
 
 /**
  * Mit Kundennummern können Kunden eindeutig indentifiziert werden. Jede

@@ -1,6 +1,6 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.kundenDetailAnzeiger;
 
-import de.hawhh.informatik.sml.mediathek.Kunde;
+import de.hawhh.informatik.sml.mediathek.materialien.kunde.Kunde;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
 
@@ -11,7 +11,7 @@ import javafx.scene.layout.Pane;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-class KundenDetailAnzeigerWerkzeug
+public class KundenDetailAnzeigerWerkzeug
 {
     private KundenDetailAnzeigerUI _ui;
 

@@ -1,6 +1,6 @@
-package de.hawhh.informatik.sml.mediathek.medien;
+package de.hawhh.informatik.sml.mediathek.materialien.medien;
 
-import de.hawhh.informatik.sml.mediathek.Geldbetrag;
+import de.hawhh.informatik.sml.mediathek.fachwerte.geldbetrag.Geldbetrag;
 
 public abstract class AbstractMedium implements Medium
 {

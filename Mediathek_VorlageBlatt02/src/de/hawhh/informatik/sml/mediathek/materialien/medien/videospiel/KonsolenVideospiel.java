@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.materialien.medien;
+package de.hawhh.informatik.sml.mediathek.materialien.medien.videospiel;
 
 public class KonsolenVideospiel extends AbstractVideospiel
 {

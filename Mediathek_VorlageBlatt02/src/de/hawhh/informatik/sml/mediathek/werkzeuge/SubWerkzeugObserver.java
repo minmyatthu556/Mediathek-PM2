@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek;
+package de.hawhh.informatik.sml.mediathek.werkzeuge;
 
 /**
  * Interface für Beobachter, die sich für Änderungen eines ObservableSubWerkzeug
@@ -7,7 +7,7 @@ package de.hawhh.informatik.sml.mediathek;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-interface SubWerkzeugObserver
+public interface SubWerkzeugObserver
 {
     /**
      * Diese Operation wird aufgerufen, sobald sich an an dem beobachteten

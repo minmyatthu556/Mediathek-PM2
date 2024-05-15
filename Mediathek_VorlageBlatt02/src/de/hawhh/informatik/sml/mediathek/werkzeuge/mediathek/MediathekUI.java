@@ -1,6 +1,6 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.mediathek;
 
-import de.hawhh.informatik.sml.mediathek.UIConstants;
+import de.hawhh.informatik.sml.mediathek.constants.UIConstants;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;

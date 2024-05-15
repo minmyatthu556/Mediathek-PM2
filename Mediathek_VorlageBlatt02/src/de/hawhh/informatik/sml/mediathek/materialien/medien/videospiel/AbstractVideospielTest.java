@@ -1,10 +1,9 @@
-package de.hawhh.informatik.sml.mediathek.materialien.medien.tests;
+package de.hawhh.informatik.sml.mediathek.materialien.medien.videospiel;
 
 import static org.junit.Assert.assertEquals;
 
+import de.hawhh.informatik.sml.mediathek.materialien.medien.AbstractMediumTest;
 import org.junit.Test;
-
-import de.hawhh.informatik.sml.mediathek.materialien.medien.AbstractVideospiel;
 
 public abstract class AbstractVideospielTest extends AbstractMediumTest
 {

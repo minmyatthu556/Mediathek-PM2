@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.fachwerte;
+package de.hawhh.informatik.sml.mediathek.fachwerte.kundennummer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

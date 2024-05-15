@@ -1,8 +1,10 @@
-package de.hawhh.informatik.sml.mediathek.werkzeuge;
+package de.hawhh.informatik.sml.mediathek.werkzeuge.mediathek;
 
-import de.hawhh.informatik.sml.mediathek.KundenstammService;
-import de.hawhh.informatik.sml.mediathek.MedienbestandService;
-import de.hawhh.informatik.sml.mediathek.VerleihService;
+import de.hawhh.informatik.sml.mediathek.service.kundenstamm.KundenstammService;
+import de.hawhh.informatik.sml.mediathek.service.medienbestand.MedienbestandService;
+import de.hawhh.informatik.sml.mediathek.service.verleih.VerleihService;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.rueckgabe.RueckgabeWerkzeug;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.ausleihe.AusleihWerkzeug;
 import javafx.stage.Stage;
 
 /**
