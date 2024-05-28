@@ -38,6 +38,7 @@ public class PCVideospielTest extends AbstractVideospielTest
     @Test
     public void testBerechneMietgebuehr()
     {
+    	assertEquals("Falscher EuroAnteil",2, _videospiel.berechneMietgebuehr(1).getEuroAnteil());
         assertEquals("Falscher EuroAnteil",6, _videospiel.berechneMietgebuehr(3).getEuroAnteil());
         assertEquals("Falscher EuroAnteil",14, _videospiel.berechneMietgebuehr(7).getEuroAnteil());
         assertEquals("Falscher EuroAnteil",21, _videospiel.berechneMietgebuehr(8).getEuroAnteil());
