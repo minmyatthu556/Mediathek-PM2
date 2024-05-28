@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import de.hawhh.informatik.sml.mediathek.fachwerte.geldbetrag.Geldbetrag;
+
 /**
  */
 public class KonsolenVideospielTest extends AbstractVideospielTest
@@ -35,17 +37,31 @@ public class KonsolenVideospielTest extends AbstractVideospielTest
         assertEquals(medium.getSystem(), "System2");
     }
 
+//    @Test
+//    public void testBerechneMietgebuehr()
+//    {
+//        assertEquals("Falscher EuroAnteil",4, _videospiel.berechneMietgebuehr(2).getEuroAnteil());
+//        assertEquals("Falscher EuroAnteil",13, _videospiel.berechneMietgebuehr(3).getEuroAnteil());
+//        assertEquals("Falscher EuroAnteil",17, _videospiel.berechneMietgebuehr(5).getEuroAnteil());
+//        assertEquals("Falscher EuroAnteil",28, _videospiel.berechneMietgebuehr(7).getEuroAnteil());
+//        assertEquals("Falscher EuroAnteil",95, _videospiel.berechneMietgebuehr(23).getEuroAnteil());
+//
+//        assertEquals("Falscher CentAnteil",0, _videospiel.berechneMietgebuehr(1).getCentAnteil());
+//
+//    }
+    
     @Test
     public void testBerechneMietgebuehr()
     {
-        assertEquals("Falscher EuroAnteil",4, _videospiel.berechneMietgebuehr(2).getEuroAnteil());
-        assertEquals("Falscher EuroAnteil",13, _videospiel.berechneMietgebuehr(3).getEuroAnteil());
-        assertEquals("Falscher EuroAnteil",17, _videospiel.berechneMietgebuehr(5).getEuroAnteil());
-        assertEquals("Falscher EuroAnteil",28, _videospiel.berechneMietgebuehr(7).getEuroAnteil());
-        assertEquals("Falscher EuroAnteil",95, _videospiel.berechneMietgebuehr(23).getEuroAnteil());
-
-        assertEquals("Falscher CentAnteil",0, _videospiel.berechneMietgebuehr(1).getCentAnteil());
-
+    	assertEquals(_videospiel.berechneMietgebuehr(1), Geldbetrag.get(200));
+    	assertEquals(_videospiel.berechneMietgebuehr(2), Geldbetrag.get(200));
+    	assertEquals(_videospiel.berechneMietgebuehr(3), Geldbetrag.get(900));
+    	assertEquals(_videospiel.berechneMietgebuehr(4), Geldbetrag.get(900));
+    	assertEquals(_videospiel.berechneMietgebuehr(5), Geldbetrag.get(900));
+    	assertEquals(_videospiel.berechneMietgebuehr(6), Geldbetrag.get(1600));
+    	assertEquals(_videospiel.berechneMietgebuehr(7), Geldbetrag.get(1600));
+    	assertEquals(_videospiel.berechneMietgebuehr(8), Geldbetrag.get(1600));
+    	assertEquals(_videospiel.berechneMietgebuehr(9), Geldbetrag.get(2300));
     }
 
 }

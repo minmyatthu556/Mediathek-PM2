@@ -8,6 +8,7 @@ import static org.junit.Assert.assertNotNull;
 public abstract class AbstractMediumTest {
     protected static final String KOMMENTAR = "Kommentar";
     protected static final String TITEL = "Titel";
+    protected static final String BEZEICHNUNG = "Bezeichnung";
     private AbstractMedium _medium;
     private AbstractMedium _medium1;
 
@@ -29,6 +30,7 @@ public abstract class AbstractMediumTest {
     {
         assertEquals(TITEL, _medium.getTitel());
         assertEquals(KOMMENTAR, _medium.getKommentar());
+        assertEquals(BEZEICHNUNG, _medium.getMedienBezeichnung());
     }
 
     @Test

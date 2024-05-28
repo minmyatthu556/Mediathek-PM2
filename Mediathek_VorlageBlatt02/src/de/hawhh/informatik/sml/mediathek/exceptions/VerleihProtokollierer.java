@@ -15,7 +15,10 @@ public class VerleihProtokollierer
      */
     public void protokolliere(VerleihEreignis ereignis, Verleihkarte verleihkarte) throws ProtokollierException
     {
-        try (FileWriter fileWriter = new FileWriter("./protokoll.txt", true))
+    	assert ereignis != null : "Vorbedingung verletzt: ereignis != null";
+    	assert verleihkarte != null : "Vorbedingung verletzt: verleihkarte != null";
+
+        try (FileWriter fileWriter = new FileWriter("./protokoll1.txt", true))
         {
             fileWriter.write(ereignis.ereignisString() + " - " + verleihkarte + "\n");
             // fileWriter.close();

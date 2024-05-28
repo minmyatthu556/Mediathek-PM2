@@ -47,7 +47,7 @@ public class DVD extends AbstractMedium
      */
     public DVD(String titel, String kommentar, String regisseur, int laufzeit)
     {
-        super(kommentar, titel);
+        super(kommentar, titel, "DVD");
 
         assert laufzeit > 0 : "Vorbedingung verletzt: laufzeit > 0";
         assert regisseur != null : "Vorbedingung verletzt: regisseur != null";
@@ -82,11 +82,6 @@ public class DVD extends AbstractMedium
     {
         assert laufzeit > 0 : "Vorbedingung verletzt: laufzeit > 0";
         _laufzeit = laufzeit;
-    }
-
-    public String getMedienBezeichnung()
-    {
-        return "DVD";
     }
 
     /**

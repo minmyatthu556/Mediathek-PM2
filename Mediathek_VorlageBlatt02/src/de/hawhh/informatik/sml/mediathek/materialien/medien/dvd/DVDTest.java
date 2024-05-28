@@ -20,12 +20,6 @@ public class DVDTest extends AbstractMediumTest
     }
 
     @Test
-    public void testGetMedienBezeichnung()
-    {
-        assertEquals(BEZEICHNUNG, _dvd.getMedienBezeichnung());
-    }
-
-    @Test
     public void testKonstruktor()
     {
         assertEquals(LAENGE, _dvd.getLaufzeit());

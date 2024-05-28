@@ -17,19 +17,32 @@ public class PCVideospiel extends AbstractVideospiel
      */
     public PCVideospiel(String titel, String kommentar, String system)
     {
-        super(titel, kommentar, system);
+        super(titel, kommentar, system, "PCVideospiel");
     }
 
-    public int getPreisNachTagen(int tage)
+//    public int getPreisNachTagen(int tage)
+//    {
+//        if (tage <= 7)
+//        {
+//            return 0;
+//        }
+//        else
+//        {
+//            int counter = ((tage - 8) / 5) + 1;
+//            return 500 * counter;
+//        }
+//    }
+    
+    public int getPreisNachTagen(int mietTage)
     {
-        if (tage <= 7)
-        {
-            return 0;
-        }
-        else
-        {
-            int counter = ((tage - 8) / 5) + 1;
-            return 500 * counter;
-        }
+    	if((mietTage-7) % 5 > 0)
+    	{
+    		return   500 * ((mietTage -7) /5+1);
+    	}
+    	else if(mietTage > 7)
+    	{
+    		return 500 *  (mietTage-7)/5;
+    	}
+    	return 0;
     }
 }

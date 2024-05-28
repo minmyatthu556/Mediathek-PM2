@@ -31,23 +31,20 @@ public abstract class AbstractVideospiel extends AbstractMedium
      * @require titel != null
      * @require kommentar != null
      * @require system != null
+     * @require medienBezeichnung != null
      * 
      * @ensure getTitel() == titel
      * @ensure getKommentar() == kommentar
      * @ensure getSystem() == system
      */
-    public AbstractVideospiel(String titel, String kommentar, String system)
+    protected AbstractVideospiel(String titel, String kommentar, String system, String medienBezeichnung)
     {
-        super(kommentar, titel);
+        super(kommentar, titel, medienBezeichnung);
 
         assert system != null : "Vorbedingung verletzt: system != null";
+        assert medienBezeichnung != null : "Vorbedingung verletzt: medienBezeichnung != null";
 
         _system = system;
-    }
-
-    public String getMedienBezeichnung()
-    {
-        return "Videospiel";
     }
 
     /**
@@ -82,9 +79,10 @@ public abstract class AbstractVideospiel extends AbstractMedium
     {
         assert mietTage > 0: "Vorbedingung verletzt: mietTage > 0";
 
-        int basispreis = 200 * mietTage;
-        int total = basispreis + getPreisNachTagen(mietTage);
-        return Geldbetrag.get(total);
+//        int basispreis = 200 * mietTage;
+//        int total = basispreis + getPreisNachTagen(mietTage);
+        
+        return Geldbetrag.get(getPreisNachTagen(mietTage) + 200);
     }
 
     public abstract int getPreisNachTagen(int tage);

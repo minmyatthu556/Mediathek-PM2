@@ -20,12 +20,6 @@ public class CDTest extends AbstractMediumTest
     }
 
     @Test
-    public void testGetMedienBezeichnung()
-    {
-        assertEquals(CD_BEZEICHNUNG, _cd1.getMedienBezeichnung());
-    }
-
-    @Test
     public void testKonstruktor()
     {
         assertEquals(LAENGE, _cd1.getSpiellaenge());

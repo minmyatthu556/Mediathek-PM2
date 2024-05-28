@@ -224,26 +224,6 @@ public class AusleihWerkzeug
         Kunde selectedKunde = _kundenAuflisterWerkzeug.getSelectedKunde();
         Datum heute = Datum.heute();
 
-        for (Medium medium : selectedMedien)
-        {
-            Verleihkarte verleihkarte = new Verleihkarte(selectedKunde, medium,
-                    heute);
-            try
-            {
-                VerleihProtokollierer verleihProtokollierer = new VerleihProtokollierer();
-                verleihProtokollierer.protokolliere(VerleihEreignis.AUSLEIHE, verleihkarte);
-            }
-            catch (ProtokollierException e)
-            {
-                // Fehlermeldung in einem Alert-Dialog anzeigen
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Fehler beim Ausleihen");
-                alert.setHeaderText("Fehler beim Ausleihen von Medien");
-                alert.setContentText(e.getMessage());
-                alert.showAndWait();
-            }
-
-        }
         _verleihService.verleiheAn(selectedKunde, selectedMedien, heute);
     }
 

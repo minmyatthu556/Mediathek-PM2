@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import de.hawhh.informatik.sml.mediathek.exceptions.ProtokollierException;
 import de.hawhh.informatik.sml.mediathek.exceptions.VerleihProtokollierer;
 import de.hawhh.informatik.sml.mediathek.fachwerte.datum.Datum;
 import de.hawhh.informatik.sml.mediathek.materialien.kunde.Kunde;
@@ -12,6 +13,8 @@ import de.hawhh.informatik.sml.mediathek.materialien.verleihkarte.Verleihkarte;
 import de.hawhh.informatik.sml.mediathek.service.kundenstamm.KundenstammService;
 import de.hawhh.informatik.sml.mediathek.service.medienbestand.MedienbestandService;
 import de.hawhh.informatik.sml.mediathek.service.observers.AbstractObservableService;
+import de.hawhh.informatik.sml.mediathek.werkzeuge.VerleihEreignis;
+import javafx.scene.control.Alert;
 import de.hawhh.informatik.sml.mediathek.materialien.medien.Medium;
 
 /**
@@ -40,6 +43,8 @@ public class VerleihServiceImpl extends AbstractObservableService implements
      * Der Kundenstamm.
      */
     private KundenstammService _kundenstamm;
+    
+    private VerleihProtokollierer _protokollierer;
 
     /**
      * Konstruktor. Erzeugt einen neuen VerleihServiceImpl.
@@ -65,7 +70,7 @@ public class VerleihServiceImpl extends AbstractObservableService implements
         _verleihkarten = erzeugeVerleihkartenBestand(initialBestand);
         _kundenstamm = kundenstamm;
         _medienbestand = medienbestand;
-        new VerleihProtokollierer();
+        _protokollierer = new VerleihProtokollierer();
     }
 
     /**
@@ -113,6 +118,20 @@ public class VerleihServiceImpl extends AbstractObservableService implements
 
         for (Medium medium : medien)
         {
+            try
+            {
+            	_protokollierer.protokolliere(VerleihEreignis.RUECKGABE, _verleihkarten.get(medium));
+            }
+            catch (ProtokollierException e)
+            {
+                // Fehlermeldung in einem Alert-Dialog anzeigen
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Fehler bei der Rückgabe");
+                alert.setHeaderText("Fehler bei der Rückgabe von Medien");
+                alert.setContentText(e.getMessage());
+                alert.showAndWait();
+            }
+
             _verleihkarten.remove(medium);
         }
         informiereUeberAenderung();
@@ -165,6 +184,19 @@ public class VerleihServiceImpl extends AbstractObservableService implements
                     ausleihDatum);
 
             _verleihkarten.put(medium, verleihkarte);
+            
+            try
+            {
+            	_protokollierer.protokolliere(VerleihEreignis.AUSLEIHE, verleihkarte);
+            }
+            catch (ProtokollierException e)
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Fehler beim Ausleihen");
+                alert.setHeaderText("Fehler beim Ausleihen von Medien");
+                alert.setContentText(e.getMessage());
+                alert.showAndWait();
+            }
         }
 
         informiereUeberAenderung();

@@ -16,11 +16,21 @@ public class KonsolenVideospiel extends AbstractVideospiel
      * @ensure getSystem() == system
      */
     public KonsolenVideospiel(String titel, String kommentar, String system) {
-        super(titel, kommentar, system);
+        super(titel, kommentar, system, "Konsolenvideospiel");
     }
 
-    public int getPreisNachTagen(int tage) {
-        int counter = tage / 3;
-        return 700 * counter;
+//    public int getPreisNachTagen(int tage) {
+//        int counter = tage / 3;
+//        return 700 * counter;
+//    }
+    
+    @Override
+    public int getPreisNachTagen(int mietTage)
+    {
+    	if (mietTage >= 3)
+    	{
+    		return (mietTage/3) * 700;
+    	}
+    	return 0;
     }
 }
