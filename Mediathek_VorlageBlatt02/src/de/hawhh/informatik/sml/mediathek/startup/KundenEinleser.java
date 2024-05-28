@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.service.einleser;
+package de.hawhh.informatik.sml.mediathek.startup;
 
 import java.io.BufferedReader;
 import java.io.File;

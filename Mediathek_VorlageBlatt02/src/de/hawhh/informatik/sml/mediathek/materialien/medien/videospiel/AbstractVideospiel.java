@@ -85,5 +85,5 @@ public abstract class AbstractVideospiel extends AbstractMedium
         return Geldbetrag.get(getPreisNachTagen(mietTage) + 200);
     }
 
-    public abstract int getPreisNachTagen(int tage);
+    protected abstract int getPreisNachTagen(int tage);
 }

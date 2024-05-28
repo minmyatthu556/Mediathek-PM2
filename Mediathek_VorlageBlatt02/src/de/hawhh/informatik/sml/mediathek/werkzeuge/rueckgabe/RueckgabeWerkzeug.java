@@ -134,10 +134,22 @@ public class RueckgabeWerkzeug
         for (Verleihkarte verleihkarte : verleihkarten)
         {
             medien.add(verleihkarte.getMedium());
-       
-            
+   
         }
+        try
+        {
         _verleihService.nimmZurueck(medien, Datum.heute());
+        }
+        catch(ProtokollierException e)
+        {
+        	Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Fehler bei der Rückgabe");
+            // alert message 
+            alert.setHeaderText("Fehler bei der Rückgabe von Medien");
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+
+        }
     }
 
     /**

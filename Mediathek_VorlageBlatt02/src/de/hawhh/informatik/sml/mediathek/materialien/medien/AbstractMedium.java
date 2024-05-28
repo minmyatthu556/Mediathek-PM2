@@ -44,7 +44,7 @@ public abstract class AbstractMedium implements Medium
      */
     public String getFormatiertenString()
     {
-        return getMedienBezeichnung() + ":\n" + "    " + "Titel: " + _titel
+        return _medienBezeichnung + ":\n" + "    " + "Titel: " + _titel
                 + "\n" + "    " + "Kommentar: " + _kommentar + "\n";
     }
 

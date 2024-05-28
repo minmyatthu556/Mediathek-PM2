@@ -1,4 +1,4 @@
-package de.hawhh.informatik.sml.mediathek.service.einleser;
+package de.hawhh.informatik.sml.mediathek.startup;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ import de.hawhh.informatik.sml.mediathek.materialien.medien.Medium;
  * @author SE2-Team, PM2-Team
  * @version SoSe 2024
  */
-public class DatenEinleser
+class DatenEinleser
 {
 
     /**

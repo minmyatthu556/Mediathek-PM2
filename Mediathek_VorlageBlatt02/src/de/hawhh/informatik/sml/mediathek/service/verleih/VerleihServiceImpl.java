@@ -110,7 +110,7 @@ public class VerleihServiceImpl extends AbstractObservableService implements
     }
 
     @Override
-    public void nimmZurueck(List<Medium> medien, Datum rueckgabeDatum)
+    public void nimmZurueck(List<Medium> medien, Datum rueckgabeDatum) throws ProtokollierException
     {
         assert sindAlleVerliehen(
                 medien) : "Vorbedingung verletzt: sindAlleVerliehen(medien)";
@@ -118,20 +118,8 @@ public class VerleihServiceImpl extends AbstractObservableService implements
 
         for (Medium medium : medien)
         {
-            try
-            {
-            	_protokollierer.protokolliere(VerleihEreignis.RUECKGABE, _verleihkarten.get(medium));
-            }
-            catch (ProtokollierException e)
-            {
-                // Fehlermeldung in einem Alert-Dialog anzeigen
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Fehler bei der Rückgabe");
-                alert.setHeaderText("Fehler bei der Rückgabe von Medien");
-                alert.setContentText(e.getMessage());
-                alert.showAndWait();
-            }
-
+          _protokollierer.protokolliere(VerleihEreignis.RUECKGABE, _verleihkarten.get(medium));
+           
             _verleihkarten.remove(medium);
         }
         informiereUeberAenderung();
@@ -169,7 +157,7 @@ public class VerleihServiceImpl extends AbstractObservableService implements
     }
 
     @Override
-    public void verleiheAn(Kunde kunde, List<Medium> medien, Datum ausleihDatum)
+    public void verleiheAn(Kunde kunde, List<Medium> medien, Datum ausleihDatum) throws ProtokollierException
     {
         assert kundeImBestand(kunde) : "Vorbedingung verletzt: kundeImBestand(kunde)";
         assert sindAlleNichtVerliehen(
@@ -184,19 +172,8 @@ public class VerleihServiceImpl extends AbstractObservableService implements
                     ausleihDatum);
 
             _verleihkarten.put(medium, verleihkarte);
+            _protokollierer.protokolliere(VerleihEreignis.AUSLEIHE, verleihkarte);
             
-            try
-            {
-            	_protokollierer.protokolliere(VerleihEreignis.AUSLEIHE, verleihkarte);
-            }
-            catch (ProtokollierException e)
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Fehler beim Ausleihen");
-                alert.setHeaderText("Fehler beim Ausleihen von Medien");
-                alert.setContentText(e.getMessage());
-                alert.showAndWait();
-            }
         }
 
         informiereUeberAenderung();

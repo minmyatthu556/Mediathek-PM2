@@ -223,8 +223,20 @@ public class AusleihWerkzeug
                 .getSelectedMedien();
         Kunde selectedKunde = _kundenAuflisterWerkzeug.getSelectedKunde();
         Datum heute = Datum.heute();
+        
+        try
+        {
+        	_verleihService.verleiheAn(selectedKunde, selectedMedien, heute);
+        }
+        catch(ProtokollierException e)
+        {
+        	Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Fehler beim Ausleihen");
+            alert.setHeaderText("Fehler beim Ausleihen von Medien");
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
 
-        _verleihService.verleiheAn(selectedKunde, selectedMedien, heute);
+        }
     }
 
     /**

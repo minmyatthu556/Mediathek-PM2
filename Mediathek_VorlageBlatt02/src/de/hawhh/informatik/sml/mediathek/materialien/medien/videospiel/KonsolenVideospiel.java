@@ -16,7 +16,7 @@ public class KonsolenVideospiel extends AbstractVideospiel
      * @ensure getSystem() == system
      */
     public KonsolenVideospiel(String titel, String kommentar, String system) {
-        super(titel, kommentar, system, "Konsolenvideospiel");
+        super(titel, kommentar, system, "Konsolen-Videospiel");
     }
 
 //    public int getPreisNachTagen(int tage) {

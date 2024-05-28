@@ -17,7 +17,7 @@ public class PCVideospiel extends AbstractVideospiel
      */
     public PCVideospiel(String titel, String kommentar, String system)
     {
-        super(titel, kommentar, system, "PCVideospiel");
+        super(titel, kommentar, system, "PC-Videospiel");
     }
 
 //    public int getPreisNachTagen(int tage)
@@ -33,7 +33,7 @@ public class PCVideospiel extends AbstractVideospiel
 //        }
 //    }
     
-    public int getPreisNachTagen(int mietTage)
+    protected int getPreisNachTagen(int mietTage)
     {
     	if((mietTage-7) % 5 > 0)
     	{

@@ -9,12 +9,12 @@ public abstract class AbstractMediumTest {
     protected static final String KOMMENTAR = "Kommentar";
     protected static final String TITEL = "Titel";
     protected static final String BEZEICHNUNG = "Bezeichnung";
-    private AbstractMedium _medium;
-    private AbstractMedium _medium1;
+    private Medium _medium;
+    private Medium _medium1;
 
-    protected abstract AbstractMedium getMedium();
+    protected abstract Medium getMedium();
 
-    public AbstractMedium getExamplar()
+    public Medium getExamplar()
     {
         return _medium;
     }
